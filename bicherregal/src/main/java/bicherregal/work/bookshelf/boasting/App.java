@@ -1,4 +1,4 @@
-package bicherregal;
+package bicherregal.work.bookshelf.boasting;
 
 /**
  * Hello world!
