@@ -88,3 +88,44 @@ appengine-version: 1.9.63
 [INFO] Final Memory: 19M/194M
 [INFO] ------------------------------------------------------------------------
 </pre>
+
+## build project
+<pre>
+$ mvn clean install
+</pre>
+- リソースファイル未定義のためスキップ
+<pre>
+[INFO] skip non existing resourceDirectory /work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/src/main/resources
+</pre>
+- コンパイル
+<pre>
+[INFO] Compiling 3 source files to /work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/target/bicherregal-1.0-SNAPSHOT/WEB-INF/classes
+</pre>
+- テストコードが無いので
+<pre>
+[INFO] No tests to run.
+</pre>
+- warファイル作成
+<pre>
+[INFO] Assembling webapp [bicherregal] in [/work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/target/bicherregal-1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [/work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/target/generated-sources/appengine-endpoints] to [/work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/target/bicherregal-1.0-SNAPSHOT]
+[INFO] Copying webapp resources [/work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/src/main/webapp]
+[INFO] Webapp assembled in [192 msecs]
+[INFO] Building war: /work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/target/bicherregal-1.0-SNAPSHOT.war
+</pre>
+- ローカルMavenリポジトリにwarファイルをインストール
+<pre>
+[INFO] Installing /work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/target/bicherregal-1.0-SNAPSHOT.war to /home/koge/.m2/repository/bicherregal/bicherregal/1.0-SNAPSHOT/bicherregal-1.0-SNAPSHOT.war
+[INFO] Installing /work/src/java/github.com/sky0621/bicherregal-ja/bicherregal/pom.xml to /home/koge/.m2/repository/bicherregal/bicherregal/1.0-SNAPSHOT/bicherregal-1.0-SNAPSHOT.pom
+</pre>
+
+## start dev server
+<pre>
+$ mvn appengine:devserver
+</pre>
+
+## access local web
+<pre>
+http://localhost:8080/
+</pre>
